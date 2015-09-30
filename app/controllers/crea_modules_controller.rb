@@ -1,5 +1,6 @@
 class CreaModulesController < ApplicationController
   before_action :set_crea_module, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /crea_modules
   # GET /crea_modules.json
