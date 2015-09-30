@@ -1,0 +1,27 @@
+%h1 Listing CREA Modules
+
+%table.table.table-striped.table-bordered
+  %thead
+    %tr
+      %th Name
+      %th Enabled
+      %th Module type
+      %th Status
+      %th
+      %th
+      %th
+
+  %tbody
+    - @crea_modules.each do |crea_module|
+      %tr
+        %td= crea_module.name
+        %td= crea_module.enabled
+        %td= crea_module.module_type
+        %td= crea_module.status
+        %td= link_to 'Show', crea_module, class: 'btn btn-default'
+        %td= link_to 'Edit', edit_crea_module_path(crea_module), class: 'btn btn-default'
+        %td= link_to 'Destroy', crea_module, method: :delete, data: { :confirm => 'Are you sure?' }, class: 'btn btn-default'
+
+%br
+
+= link_to 'New Crea module', new_crea_module_path, class: 'btn btn-primary'

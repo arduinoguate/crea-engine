@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @crea_module.name
+%p
+  %b Enabled:
+  = @crea_module.enabled
+%p
+  %b Module type:
+  = @crea_module.module_type
+%p
+  %b Status:
+  = @crea_module.status
+
+= link_to 'Edit', edit_crea_module_path(@crea_module)
+\|
+= link_to 'Back', crea_modules_path
